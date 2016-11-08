@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Resume</title>
+
+  <!-- Load the page styles. -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAEO09L3TtYc0uNabHc19U67nr9g3OxcnQ"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <div id="main">
+
+    <header id="header" class="center-content clear-fix header">
+      <ul id="topContacts" class="flex-box"></ul>
+    </header>
+  <nav aria-label="Page navigation">
+ <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#workExperience">Work Experience</a></li>
+  <li role="presentation"><a href="#projects">Projects</a></li>
+  <li role="presentation"><a href="#education">Education</a></li>
+  <li role="presentation"><a href="#mapDiv">My Location</a></li>
+  <li role="presentation"><a href="#lets-connect">Lets Connect</a></li>
+</ul>
+</nav>
+    <div style="clear: both;"></div>
+    <section id="workExperience" class="gray">
+      <h2>Work Experience</h2>
+    </section>
+    <section id="projects" class="gray">
+      <h2>Projects</h2>
+    </section>
+    <section id="education" class="gray">
+      <h2>Education</h2>
+    </section>
+    <section id="mapDiv" class="gray">
+        <h2>Where I've Lived and Worked</h2>
+    </section>
+
+    <footer id="lets-connect" class="footer row">
+      <div class="footer-social-icons">
+          <h4 class="_14">Follow me on</h4>
+            <ul class="social-icons">
+              <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+          </ul>
+            </div>
+       </div>
+
+    </footer>
+
+  </div>
+
+  <script src="js/jQuery.js"></script>
+
+  <!-- More on helper.js in the class -->
+  <script src="js/helper.js"></script>
+
+  <script src="js/resumeBuilder.js"></script>
+
+  <script>
+
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('lets-connect').style.display = 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
